@@ -11,13 +11,8 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Column // Row
-    // ListView
-    // ListView.builder
-    // Expand
     return Scaffold(
       backgroundColor: AppStyles.bgColor,
-      // scrollable effect
       body: ListView(
         children: [
           const SizedBox(
@@ -54,7 +49,6 @@ class HomeScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                           color: Colors.red,
                           image: const DecorationImage(
-                            // AppMedia logo = AppMedia()
                             image: AssetImage(AppMedia.logo),
                           ),
                           borderRadius: BorderRadius.circular(10)),
