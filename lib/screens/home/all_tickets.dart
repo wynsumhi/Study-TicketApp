@@ -11,19 +11,25 @@ class AllTickets extends StatelessWidget {
       appBar: AppBar(
         title: const Text("All Tickets"),
       ),
-      body: ListView(children: [
-        SingleChildScrollView(
-          child: Column(
+      body: ListView(
+        children: [
+          SingleChildScrollView(
+            child: Column(
               children: ticketList
-                  .map((singleTicket) => Container(
+                  .map(
+                    (singleTicket) => Container(
                       margin: const EdgeInsets.only(bottom: 20),
                       child: TicketView(
                         ticket: singleTicket,
                         wholeScreen: true,
-                      )))
-                  .toList()),
-        )
-      ]),
+                      ),
+                    ),
+                  )
+                  .toList(),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

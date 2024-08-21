@@ -15,7 +15,6 @@ class _BottomNavBarState extends State<BottomNavBar> {
   final appScreens = [
     const HomeScreen(),
     const SearchScreen(),
-    const Center(child: Text("Search")),
     const Center(child: Text("Ticket")),
     const Center(child: Text("Profile")),
   ];

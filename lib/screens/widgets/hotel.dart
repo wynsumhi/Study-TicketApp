@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ticket_app/base/res/media.dart';
 import 'package:ticket_app/base/res/styles/app_styles.dart';
 
 class Hotel extends StatelessWidget {
@@ -13,7 +12,7 @@ class Hotel extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       width: size.width * 0.6,
       height: 350,
-      margin: EdgeInsets.only(right: 16),
+      margin: const EdgeInsets.only(right: 16),
       decoration: BoxDecoration(
           color: AppStyles.primaryColor,
           borderRadius: BorderRadius.circular(18)),
@@ -42,7 +41,7 @@ class Hotel extends StatelessWidget {
                   AppStyles.headLineStyle1.copyWith(color: AppStyles.kakiColor),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
           Padding(
@@ -52,7 +51,7 @@ class Hotel extends StatelessWidget {
               style: AppStyles.headLineStyle3.copyWith(color: Colors.white),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           Padding(
