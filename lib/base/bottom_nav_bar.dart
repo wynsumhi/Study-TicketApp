@@ -1,6 +1,7 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:ticket_app/screens/home_screen.dart';
+import 'package:ticket_app/screens/home/home_screen.dart';
+import 'package:ticket_app/screens/search/search_screen.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -13,6 +14,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   // index를 사용하여 반복
   final appScreens = [
     const HomeScreen(),
+    const SearchScreen(),
     const Center(child: Text("Search")),
     const Center(child: Text("Ticket")),
     const Center(child: Text("Profile")),
