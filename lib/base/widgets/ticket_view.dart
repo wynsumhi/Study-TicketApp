@@ -22,7 +22,7 @@ class TicketView extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     return SizedBox(
       width: size.width * 0.85,
-      height: 189,
+      height: 178,
       child: Container(
         margin: EdgeInsets.only(right: wholeScreen == true ? 0 : 16),
         child: Column(
@@ -147,9 +147,9 @@ class TicketView extends StatelessWidget {
                   color: isColor == null
                       ? AppStyles.ticketOrange
                       : AppStyles.ticketColor,
-                  borderRadius: const BorderRadius.only(
-                      bottomLeft: Radius.circular(21),
-                      bottomRight: Radius.circular(21))),
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(isColor == null ? 21 : 0),
+                      bottomRight: Radius.circular(isColor == null ? 21 : 0))),
               child: Column(
                 children: [
                   // show departure and destination with icon first line
@@ -157,17 +157,23 @@ class TicketView extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       AppColumnTextLayout(
-                          topText: ticket["date"],
-                          bottomText: "Date",
-                          alignment: CrossAxisAlignment.start),
+                        topText: ticket["date"],
+                        bottomText: "Date",
+                        alignment: CrossAxisAlignment.start,
+                        isColor: isColor,
+                      ),
                       AppColumnTextLayout(
-                          topText: ticket["departure_time"],
-                          bottomText: "Departure time",
-                          alignment: CrossAxisAlignment.center),
+                        topText: ticket["departure_time"],
+                        bottomText: "Departure time",
+                        alignment: CrossAxisAlignment.center,
+                        isColor: isColor,
+                      ),
                       AppColumnTextLayout(
-                          topText: ticket["number"].toString(),
-                          bottomText: "Number",
-                          alignment: CrossAxisAlignment.end),
+                        topText: ticket["number"].toString(),
+                        bottomText: "Number",
+                        alignment: CrossAxisAlignment.end,
+                        isColor: isColor,
+                      ),
                     ],
                   ),
                 ],

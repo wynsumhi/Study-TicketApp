@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 Color primary = const Color(0xFF687daf);
 
@@ -14,7 +13,7 @@ class AppStyles {
   static Color planeColor = const Color(0xFFBFC2DF);
   static Color findTicketColor = const Color(0xD91130CE);
   static Color circleColor = const Color(0xFF189999);
-  static Color ticketColor = Colors.white;
+  static Color ticketColor = const Color(0xFFFFFFFF);
   static Color dotColor = const Color(0xFF8ACCF7);
   static Color planeSecondColor = const Color(0xFFBACCF7);
 
@@ -38,8 +37,6 @@ class AppStyles {
     fontWeight: FontWeight.w500,
   );
 
-  static TextStyle headLineStyle4 = const TextStyle(
-    fontSize: 14,
-    fontWeight: FontWeight.w500,
-  );
+  static TextStyle headLineStyle4 = TextStyle(
+      fontSize: 14, fontWeight: FontWeight.w500, color: Colors.grey.shade500);
 }
